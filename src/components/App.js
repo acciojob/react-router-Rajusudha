@@ -1,13 +1,22 @@
+// import logo from './logo.svg';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
 
-import React from "react";
-import './../styles/App.css';
-
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="App">
+       <Header/>
+       <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+     </Routes>
+    
+   
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
